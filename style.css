@@ -1,0 +1,200 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppons', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgb(14, 14, 14);
+
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(50, 50, 50, 0.568);
+            border-radius: 10px;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background: url(fitness.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 100px;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            position: relative;
+            font-size: 2em;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header .navigation {
+            position: relative;
+            display:flex;
+        }
+
+        header .navigation li {
+            list-style-type: none;
+
+        }
+
+        header .navigation li a {
+            text-decoration: none;
+            display: flex;
+            justify-content: space-around;
+            padding: 0px 10px;
+            color: #fff;
+            font-size: large;
+            height: 30px;
+        }
+
+        header .navigation li a:hover {
+           
+            border-bottom: 5px solid red;
+            transition: 0.7s;
+        }
+
+
+        .content {
+            max-width: 600px;
+        }
+
+        .content .contentbx h2 {
+            font-size: 3em;
+            color: #fff;
+
+        }
+
+        .content .contentbx p {
+            color: #fff;
+            font-size: 1em;
+            margin: 20px 0;
+            font-weight: 300;
+        }
+
+        .content .contentbx a {
+            display: inline-block;
+            color: #fff;
+            background-color: red;
+            text-decoration: none;
+            padding: 10px 30px;
+            border: 2px groove black;
+            cursor: pointer;
+            border-radius: 10px;
+            margin: 20px 0 50px 0;
+        }
+
+        .socialMedia {
+            display: flex;
+            position: absolute;
+            bottom: 50px;
+        }
+
+        .socialMedia li {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 10px;
+        }
+
+        .socialMedia li a {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+            filter: invert(1);
+            transform: scale(0.8);
+        }
+
+        @media (max-width:768px) {
+            header {
+                padding: 20px 30px;
+            }
+
+            section {
+                padding: 40px;
+                background: url(bg2.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+
+            .content {
+                top: 30%;
+                left: 10%;
+            }
+
+            .content .contentbx h2 {
+                font-size: 2em;
+            }
+
+            .socialMedia {
+                bottom: 100px;
+                left: 10%
+            }
+
+            .content .contentbx a {
+                margin-left: 20%;
+            }
+
+            header .navigation {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                background: rgba(0, 0, 0, 0.703);
+                z-index: 1;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            header .navigation li a {
+                font-size: 25px;
+                margin: 10px 0;
+            }
+            .toggleMenu{
+                position: relative;
+                height: 20px;
+                width:20px;
+                background: url(menu.png);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                z-index: 10;
+            }
+            .toggleMenu.active{
+                background: white url(remove.png)  ;
+                cursor: pointer;
+            }
+            .navigation.active{
+                display: flex;
+            }
+        }
